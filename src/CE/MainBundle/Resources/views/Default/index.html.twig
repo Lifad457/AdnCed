@@ -1,1 +1,7 @@
-Hello {{ name }}!
+{% extends 'CEMainBundle::layout.html.twig' %}
+
+{% block body %}
+	Hello {{ name }}!
+	<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+	<button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+{% endblock %}
