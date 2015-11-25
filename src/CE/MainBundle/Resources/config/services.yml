@@ -1,0 +1,4 @@
+services:
+#    ce_main.example:
+#        class: CE\MainBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
