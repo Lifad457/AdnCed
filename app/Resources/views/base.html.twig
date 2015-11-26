@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Bison Cédric">
+
+        <title>{% block title %}C&E AMBASSADORS{% endblock %}</title>
 
 		{% stylesheets 'css/*' filter='cssrewrite' %}
             <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
         
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('logo.ico') }}" />
+		
     </head>
     <body>
+		{% block site_header %}
+			<div class="container-fluid">
+				<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+				<div class="col-xs-6 col-md-4"><img src="{{ asset('images/logo.jpg') }}" alt="Logo C&E AMBASSADORS" class="img-responsive center-block"></div>
+				<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+			</div>
+			
+		{% endblock %}
         {% block body %}{% endblock %}
         
     </body>
