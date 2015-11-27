@@ -25,13 +25,41 @@
     <body>
 		{% block site_header %}
 			<div class="container-fluid">
-				<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-				<div class="col-xs-6 col-md-4"><img src="{{ asset('images/logo.jpg') }}" alt="Logo C&E AMBASSADORS" class="img-responsive center-block"></div>
-				<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-			</div>
-			
+				<div class="col-md-4">
+					<img src="{{ asset('images/soc-med-logos.jpg') }}" alt="Facebook" class="img-responsive">
+					<!--<img src="{{ asset('images/logo.jpg') }}" alt="Twitter" class="img-responsive">
+					<img src="{{ asset('images/logo.jpg') }}" alt="Pinterest" class="img-responsive">
+					<img src="{{ asset('images/logo.jpg') }}" alt="Instagram" class="img-responsive">-->
+				</div>
+				<div class="col-md-4"><img src="{{ asset('images/logo.jpg') }}" alt="Logo C&E AMBASSADORS" class="img-responsive center-block"></div>
+				<div class="col-md-2">Sign up for our C&E News</div>
+				<div class="col-md-2"><input type="email" class="form-control" id="email" placeholder="Email"></div>
+			</div>			
 		{% endblock %}
+
+		{% block barre_de_navigation %}
+			
+			<div class="container-fluid">				
+				<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+				<div class="col-md-1">C&E NEWS</div>
+				<div class="col-md-1">ABOUT US</div>
+				<div class="col-md-1">SERVICES</div>
+				<div class="col-md-1">PROJECTS</div>
+				<div class="col-md-1">STYLE</div>
+				<div class="col-md-1">LIFESTYLE</div>
+				<div class="col-md-1">CONTACTS</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+			</div>
+
+		{% endblock %}
+
         {% block body %}{% endblock %}
-        
+		
+		{% block javascripts %}
+			<script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+		{% endblock %}   
     </body>
 </html>
