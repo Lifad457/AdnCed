@@ -24,17 +24,34 @@
     </head>
     <body>
 		{% block site_header %}
+
 			<div class="container-fluid">
+				<!-- Reseaux sociaux -->
 				<div class="col-md-4">
-					<img src="{{ asset('images/soc-med-logos.jpg') }}" alt="Facebook" class="img-responsive">
-					<!--<img src="{{ asset('images/logo.jpg') }}" alt="Twitter" class="img-responsive">
-					<img src="{{ asset('images/logo.jpg') }}" alt="Pinterest" class="img-responsive">
-					<img src="{{ asset('images/logo.jpg') }}" alt="Instagram" class="img-responsive">-->
+					<img src="{{ asset('images/facebook.jpg') }}" alt="Facebook" height="50" width="50">
+					<img src="{{ asset('images/facebook.jpg') }}" alt="Twitter" height="50" width="50">
+					<img src="{{ asset('images/facebook.jpg') }}" alt="Pinterest" height="50" width="50">
+					<img src="{{ asset('images/facebook.jpg') }}" alt="Instagram" height="50" width="50">
 				</div>
-				<div class="col-md-4"><img src="{{ asset('images/logo.jpg') }}" alt="Logo C&E AMBASSADORS" class="img-responsive center-block"></div>
-				<div class="col-md-2">Sign up for our C&E News</div>
-				<div class="col-md-2"><input type="email" class="form-control" id="email" placeholder="Email"></div>
-			</div>			
+
+				<!-- Logo C&E -->
+				<div class="col-md-4" style="border= 1"><img src="{{ asset('images/logo.jpg') }}" alt="Logo C&E AMBASSADORS" class="img-responsive center-block"></div>
+
+				<!-- Newsletter -->
+				<div class="col-md-1"></div>
+				<div class="col-md-3">
+					<form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+							<p>
+								<label for="email">Sign up for our C&E News
+									<input type="email" class="form-control" id="email" placeholder="Email" />
+								</label>
+							</p>
+                        </div> 
+                    </form>
+				</div>
+			</div>
+					
 		{% endblock %}
 
 		{% block barre_de_navigation %}
